@@ -1,0 +1,124 @@
+body{
+    margin: 0 auto;
+}
+
+#capturaDiv{
+    margin: 5% auto;
+    background-color: #fafafa;
+    width: 30%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+#botonAdd{
+    background-color: #25D538;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#botonAdd:hover{
+    background-color: #0e8b1a;
+    border: 2px solid #000000;
+}
+
+#botonCancel{
+    background-color: #EC1D1D;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#botonCancel:hover{
+    background-color: #550a03;
+    border: 2px solid #000000;
+}
+
+#botonDatos{
+    background-color: #1d3cec;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#botonDatos:hover{
+    background-color: #180352;
+    border: 2px solid #000000;
+}
+
+.campos{
+    background-color: white;
+    border: 1px solid;
+    height: 20px;
+    border-radius: 3px;
+}
+
+#departamento{
+    width: 175px;
+    height: 30px;
+}
+
+#container{
+    margin: auto;
+}
+
+.active{
+    background-color: #D9D2D1;
+}
+
+.active::after{
+    content: '\2796';
+}
+
+.content{
+ 
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.tabla{
+    display: table;
+    width: 90%;
+    margin: auto;
+}
+
+.fila{
+    display: table-row;
+}
+
+.celda{
+    display: table-cell;
+    vertical-align: middle; 
+}
+
+.st0{
+    fill: #808080;
+    stroke: yellow;
+    stroke-width: 0.5;
+}
+
+.st1{
+    fill: #0013bb;
+    stroke: yellow;
+    stroke-width: 0.5;
+}
+
+#datos{
+    display: none;
+    padding-top: 125px;
+}
+
+#pieChart{
+    width: 600px;
+    height: 300px;
+}

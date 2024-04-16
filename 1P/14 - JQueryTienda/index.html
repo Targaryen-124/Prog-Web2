@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 - Tienda</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="logica.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="capturaDiv">
+        <table>
+
+            <tr>
+                <td>Seleccione Categoría:</td>
+                <td>
+                    <select name="" id="categoria" onchange="cargarProductos();">
+                        <option value="damas">Damas</option>
+                        <option value="caballeros">Caballeros</option>
+                        <option value="niños">Niños</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Seleccione Producto</td>
+                <td>
+                    <select id="producto" onchange="mostrarPrecio();">
+
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ingrese Cantidad:</td>
+                <td><input type="text" id="cantidad" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            
+            <tr>
+                <td>Precio:</td>
+                <td>
+                    <label id="precio"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Subtotal:</td>
+                <td>
+                    <label id="subtotal"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>ISV (15%):</td>
+                <td>
+                    <label id="isv"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Descuento:</td>
+                <td>
+                    <label id="descuento"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Total:</td>
+                <td>
+                    <label id="total"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button id="botonAdd" onclick="calcular();">Calcular</button>
+                </td>
+                <td>
+                    <button id="botonCancel" onclick="cancelar();">Cancelar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.10.5/autoNumeric.min.js" integrity="sha512-EGJ6YGRXzV3b1ouNsqiw4bI8wxwd+/ZBN+cjxbm6q1vh3i3H19AJtHVaICXry109EVn4pLBGAwaVJLQhcazS2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

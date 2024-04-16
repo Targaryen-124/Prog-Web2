@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Matricula de Estudiantes por Carrera</title>
+    <script src="logica.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <div id="capturaDiv">
+        <table>
+            <tr>
+                <td>Ingrese ID: </td>
+                <td><input type="text" id="id" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            <tr>
+                <td>Ingrese Nombre: </td>
+                <td><input type="text" id="nombre" onkeypress="return soloLetras(event);"></td>
+            </tr>
+            <tr>
+                <td>Ingrese Edad: </td>
+                <td><input type="number" id="edad" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            <tr>
+                <td>Seleccione Carrera: </td>
+                <td>
+                    <select name="" id="carrera">
+                        <option value="computacion">Ingenieria en Computacion</option>
+                        <option value="industrial">Ingenieria en Producción Industrial</option>
+                        <option value="electronica">Ingenieria en Electronica</option>
+                        <option value="negocios">Ingenieria de Negocios</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Seleccione Fecha de Matrícula: </td>
+                <td><input type="date" id="fecha"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="btnAddStudent" onclick="agregar()">Agregar Estudiante a la lista</button>
+                </td>
+                <td>
+                    <button id="btnCancel" onclick="cancelar()">Cancelar</button>
+                    <button id="btnGenerateGraphic" onclick="generarGrafico()">Generar Grafico</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table id="grilla">
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Carrera</th>
+                <th>Fecha Matrícula</th>
+                <th>Eliminar</th>
+            </thead>
+        </table>
+    </div>
+    <div id="pieChart"></div>
+</body>
+<script>
+
+</script>
+
+</html>

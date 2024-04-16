@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Matricula de Estudiantes por Carrera</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <div class="encabezado">
+        <h1>ERICK MENDEZ - 202110110304</h1>
+    </div>
+    <div class="global">
+
+    
+    <div id="capturaDiv">
+        <table>
+            <tr>
+                <td>ID</td>
+                <td><input type="text" id="id" ></td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" id="nombre"></td>
+            </tr>
+            <tr>
+                <td>Apellido</td>
+                <td><input type="text" id="apellido" ></td>
+            </tr>
+
+            <tr>
+                <td>edad</td>
+                <td><input type="number" id="edad" ></td>
+            </tr>
+            
+           
+            <tr>
+                <td>Salario</td>
+                <td><input type="text" id="salario"></td>
+            </tr>
+            <tr>
+                <td>Direccion</td>
+                <td><input type="text" id="dir"></td>
+            </tr>
+            <tr>
+                <td>Red Social</td>
+                <td><input type="text" id="red"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="botonAdd" onclick="agregar()">Registrar</button>
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+
+      
+    <div class="tabla">
+        <table id="grilla">
+            <thead>
+                <th>ID</th>
+                <th>Nombre Completo</th>
+                <th>Edad</th>
+                <th>Salario</th>
+                <th>Impuestos</th>
+                <th>Salario Neto</th>
+                <th>Link</th>
+            </thead>
+           <tbody id="body">
+
+           </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+
+        <div class="promedios">
+            <p class="prom">Promedio de edad</p>
+            <label id="prom-edad"></label>
+        </div>
+        <div class="promedios">
+            <p class="prom">Promedio de Impuestos</p>
+            <label id="prom-imp"></label>
+        </div>
+        <div class="promedios">
+            <p class="prom">Promedio de salarios</p>
+            <label id="prom-sal"></label>
+        </div>
+        <div class="promedios">
+            <p class="prom">Promedio de salario neto</p>
+            <label id="prom-salneto"></label>
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p>Elaborado por: Erick Mauricio Mendez Flores - 202110110324</p>
+    <p>&copy; 2024 UTH Choluteca. Todos los derechos reservados.</p>
+    
+    
+   
+
+</footer>
+    <script src="logica.js"></script>
+</body>
+</html>

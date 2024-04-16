@@ -1,0 +1,123 @@
+body{
+    margin: 0 auto;
+    
+}
+
+#capturaDiv{
+    
+    
+    background-color: #fafafa;
+    width: 400px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+#botonAdd{
+    background-color: #25D538;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#botonAdd:hover{
+    background-color: #0e8b1a;
+    border: 2px solid #000000;
+}
+
+#botonCancel{
+    background-color: #EC1D1D;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#botonCancel:hover{
+    background-color: #550a03;
+    border: 2px solid #000000;
+}
+
+#botonGrafico{
+    background-color: #ebf112;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#botonGrafico:hover{
+    background-color: #deac07;
+    border: 2px solid #000000;
+}
+
+#grilla td, #grilla th{
+    border: 1px solid #ddd;
+}
+
+#grilla{
+    margin: 0 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    
+}
+
+#grilla th{
+    background-color: #4CAF50;
+    padding: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+    
+}
+
+#grilla tr:nth-child(even){
+    background-color: #f2f2f2f2;
+}
+
+#grilla tr:hover{
+    background-color: #ddd;
+}
+
+.promedios{
+    margin-left: 5%;
+  
+}
+.global{
+    display: flex;
+    
+    padding: 5%;
+}
+
+.tabla{
+    
+    width: 1000px;
+    
+}
+.encabezado{
+    background: #0e8b1a;
+    width: 100%;
+    height: 70px;
+    border-top: solid 3px black;
+    
+}
+h1{
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    text-align: center;
+    background: #0e8b1a;
+    bottom: 0;
+    
+}

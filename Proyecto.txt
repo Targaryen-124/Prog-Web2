@@ -1,0 +1,36 @@
+Proyecto P1 10%
+Tarea Grupal 10%
+Examen 15%
+
+Opciones:
+1. Biblioteca
+	Aplicacion registro de libros por categoria, estante, 	columna.
+	Control de prestamos.
+
+2. Consultorio Juridico
+	Perfil del Abogado (Registro)
+	Registro de horas
+	Registro de casos, seguimiento, bitacora
+
+3. Tickets (Servicio al cliente)
+	Generar ticket para atencion (Tipo Banco)
+		Voz y pantalla
+		Distribucion de escritorios
+
+4. Inventario oficina
+5. Repositorio de Proyectos
+
+Grupo # 3
+
+JORGE ALBERTO ALMENDARES OCHOA
+MIKKEL GEHOVANY ALMENDAREZ VELASQUEZ
+ALVARO LUIS CADENAS RAMIREZ
+CHRISTIAN DANIEL COREA GEVAWER
+HECTOR ENMANUEL FLORES HERRERA
+YOHANA PATRICIA PADILLA PADILLA
+VILMA STEPHANIE ROMERO COLADO
+MICHAEL JAVIER TURCIOS APARICIOS
+MARVIN OMAR YANES ROSALES
+
+Fase - 1
+Modelado y diseño

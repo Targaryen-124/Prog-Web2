@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="tablaRegistro">
+        <thead>
+            <tr>
+                <th>Salario</th>
+                <th>Impuesto</th>
+                <th>Salario Neto</th>
+            </tr>
+                        
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>20000</td>
+                    <td>2000</td>
+                    <td>18000</td>
+                </tr>
+                <tr>
+                    <td>40000</td>
+                    <td>5000</td>
+                    <td>15000</td>
+                </tr>
+              <!-- Aquí se insertarán los registros -->
+        </tbody>
+    </table>
+    
+    <h2>Promedio de Campos</h2>
+    <label for="promedioSalario">Promedio de Salario:</label>
+    <label id="promedioSalarioLabel"></label><br>
+    <label for="promedioImpuesto">Promedio de Impuesto:</label>
+    <label id="promedioImpuestoLabel"></label><br>
+    <label for="promedioSalarioNeto">Promedio de Salario Neto:</label>
+    <label id="promedioSalarioNetoLabel"></label><br>
+    
+    <script>
+        // Obtener la tabla
+var tabla = document.getElementById("tablaRegistro");
+
+// Obtener los labels para mostrar los promedios
+var promedioSalarioLabel = document.getElementById("promedioSalarioLabel");
+var promedioImpuestoLabel = document.getElementById("promedioImpuestoLabel");
+var promedioSalarioNetoLabel = document.getElementById("promedioSalarioNetoLabel");
+
+// Función para calcular el promedio de los campos
+function calcularPromedios() {
+    var filas = tabla.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+    var totalSalario = 0;
+    var totalImpuesto = 0;
+    var totalSalarioNeto = 0;
+
+    for (var i = 0; i < filas.length; i++) {
+        var salario = parseFloat(filas[i].getElementsByTagName("td")[0].innerText);
+        var impuesto = parseFloat(filas[i].getElementsByTagName("td")[1].innerText);
+        var salarioNeto = parseFloat(filas[i].getElementsByTagName("td")[2].innerText);
+
+        totalSalario += salario;
+        totalImpuesto += impuesto;
+        totalSalarioNeto += salarioNeto;
+    }
+
+    var cantidadRegistros = filas.length;
+    var promedioSalario = totalSalario / cantidadRegistros;
+    var promedioImpuesto = totalImpuesto / cantidadRegistros;
+    var promedioSalarioNeto = totalSalarioNeto / cantidadRegistros;
+
+    // Actualizar los labels con los promedios
+    promedioSalarioLabel.textContent = promedioSalario.toFixed(2);
+    promedioImpuestoLabel.textContent = promedioImpuesto.toFixed(2);
+    promedioSalarioNetoLabel.textContent = promedioSalarioNeto.toFixed(2);
+}
+
+// Llamar a la función para calcular los promedios cuando se carga la página
+calcularPromedios();
+
+    </script>
+</body>
+</html>

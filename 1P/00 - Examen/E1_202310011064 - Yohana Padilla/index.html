@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00 - Examen1</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="logica.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="capturaDiv" onload="activar();">
+        <table>
+            <tr>
+                <td>Código de exportación</td>
+                <td><input type="text" id="codExportacion";></td>
+            </tr>
+            <tr>
+                <td>Producto:</td>
+                <td>
+                    <select name="" id="producto"  onchange="mostrarPrecio();">
+                        <option value="maiz">Maíz</option>
+                        <option value="frijol">Frijol</option>
+                        <option value="arroz"> Arroz</option>
+                    </select>
+                </td>
+            </tr>
+           
+            <tr>
+                <td>Precio:</td>
+                <td>
+                    <label id="precio"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ingrese Cantidad:</td>
+                <td><input type="text" id="cantidad" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+
+            <tr>
+                <td>Subtotal:</td>
+                <td>
+                    <label id="subtotal"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Impuesto sobre exportaciones:</td>
+                <td>
+                    <label id="isv"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Total:</td>
+                <td>
+                    <label id="total"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button id="botonCalcular" onclick="calcular();">Calcular</button>
+                </td>
+                <td>
+                    <button id="botonAgregar" onclick="agregar();">Agregar</button>
+                </td>
+                <td>
+                    <button id="botonCancel" onclick="cancelar();">Cancelar</button>
+                </td>
+                <td>
+                    <button id="botonGrafico" onclick="generarGrafico();">Estadísticas</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table id="grilla">
+            <thead>
+                <th>Códigp Exp.</th>
+                <th>Producto</th>
+                <th>Cantidad (lbs)</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th>Impuesto</th>
+                <th>Total</th>
+                <th>Eliminar</th>
+            </thead>
+        </table>
+    </div>
+
+    <div id="columnChart"></div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.10.5/autoNumeric.min.js" integrity="sha512-EGJ6YGRXzV3b1ouNsqiw4bI8wxwd+/ZBN+cjxbm6q1vh3i3H19AJtHVaICXry109EVn4pLBGAwaVJLQhcazS2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

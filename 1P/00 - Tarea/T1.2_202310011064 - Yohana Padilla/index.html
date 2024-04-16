@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Yohana Padilla - 202310011064">
+    <title>Registro Restaurante</title>
+    <script src="logica.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <div id="capturaDiv">
+        <table>
+            <tr>
+                <td>Categoria de Platillo: </td>
+                <td>
+                    <select name="" id="catPlatillo">
+                        <option value="entradas">Entradas</option>
+                        <option value="pizzas">Pizzas</option>
+                        <option value="especial">Plato Especial</option>
+                        <option value="postres">Postres</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Platillo: </td>
+                <td>
+                    <select name="" id="platillo">
+                        <option value="panAjo">Pan de Ajo</option>
+                        <option value="ensalada">Ensalada</option>
+                        <option value="pizzaPersonal">Pizza Personal</option>
+                        <option value="pizzaGrande">Pizza Grande</option>
+                        <option value="pastaCarbonara">Pasta Carbonara</option>
+                        <option value="pastelChocolate">Pastel de Chocolate</option>
+                        <option value="copaHelado">Copa de Helado</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Precio: </td>
+                <td><input type="number" id="precio" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            <tr>
+                <td>Seleccione Fecha de Matrícula: </td>
+                <td><input type="date" id="fecha"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="btnAgregar" onclick="agregar()">Agregar Pedido</button>
+                </td>
+                <td>
+                    <button id="btnCancelar" onclick="cancelar()">Cancelar</button>
+                    <button id="btnEstadistica" onclick="generarGrafico()">Estadisticas</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table id="grilla">
+            <thead>
+                <th>Categoria del Platillo</th>
+                <th>Platillo</th>
+                <th>Precio</th>
+                <th>Fecha</th>
+                <th>Eliminar</th>
+            </thead>
+        </table>
+    </div>
+    <div id="pieChart"></div>
+    <div id="barChart"></div>
+</body>
+<script>
+
+</script>
+
+</html>

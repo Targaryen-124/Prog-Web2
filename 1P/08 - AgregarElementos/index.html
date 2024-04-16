@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Add Items</title>
+</head>
+<body>
+    <ul id="lista">
+        <li><input type="checkbox" class="tarea" id="chk-1">Tramitar DNI</li>
+        <li><input type="checkbox" class="tarea" id="chk-2">Renovar Licencia</li>
+        <li><input type="checkbox" class="tarea" id="chk-3">Comprar Medicamentos</li>
+        <li><input type="checkbox" class="tarea" id="chk-4">Hacer el Super</li>
+        <li><input type="checkbox" class="tarea" id="chk-5">Ir a la Universidad</li>
+    </ul>
+
+    <input type="text" id="nuevaTarea" placeholder="Ingrese una nueva tarea">
+    <input type="button" value="Agregar nueva tarea" onclick="agregar();">
+    <input type="button" value="Finalizar tarea" onclick="finalizar();">
+
+    <script>
+
+        var contador = document.getElementsByClassName("tarea").length;
+        
+        function agregar(){
+            let elemento = document.createElement("li");
+            let check = document.createElement("input");
+            check.type = "checkbox";
+            check.className = "tarea";
+            check.id = "chk-" + (contador + 1);
+            contador++;
+
+            let nuevaTarea = document.getElementById("nuevaTarea").value;
+            let texto = document.createTextNode(nuevaTarea);
+
+            if(nuevaTarea == "")
+                alert("Debe ingresar texto en la nueva tarea");
+            else
+            {
+                elemento.appendChild(check);
+                elemento.appendChild(texto);
+
+                let lista = document.getElementById("lista");
+                lista.appendChild(elemento);
+            }
+
+        }
+
+        function finalizar(){
+            let lista = document.getElementById("lista");
+            let elemento = document.getElementsByTagName("li");
+
+            for(let i = 0; i < elemento.length; i++){
+                if(elemento[i].childNodes[0].checked)
+                {
+                   // elemento[i].style = "text-decoration: line-through; color: red;"
+                   lista.removeChild(elemento[i]);
+                   i--;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

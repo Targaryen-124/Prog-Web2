@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>06 - ManipulandoAtributos</title>
+        <style>
+            .oculto{
+                display: none;
+            }
+            .visible{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus blanditiis aut nesciunt iure doloribus possimus distinctio. Delectus blanditiis 
+            quod beatae laborum corporis assumenda, repellat ipsam, pariatur, provident dolore commodi facilis. Quo assumenda illo atque tempore, ipsum quod iure eligendi 
+            inventore ea cumque nam obcaecati sed veritatis harum rem mollitia?
+            <span id="textoIn" class="oculto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus blanditiis aut nesciunt iure doloribus possimus distinctio. Delectus blanditiis 
+                quod beatae laborum corporis assumenda, repellat ipsam, pariatur, provident dolore commodi facilis. Quo assumenda illo atque tempore, ipsum quod iure eligendi 
+                inventore ea cumque nam obcaecati sed veritatis harum rem mollitia?
+            </span>
+        </p>
+
+        <a href="#" id="enlace" onclick="mostrar(); return false;">Seguir Leyendo</a>
+
+        <script>
+            function mostrar()
+            {
+                let elemento = document.getElementById("textoIn");
+                elemento.className = "visible";
+
+                let enlace = document.getElementById("enlace");
+                enlace.className = "oculto";
+            }
+        </script>
+
+    </body>
+</html>

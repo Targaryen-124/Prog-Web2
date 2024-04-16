@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>05 - Enlaces</title>
+    </head>
+    <body>
+        <div id="datos">
+            <p>
+                Lorem <a href="https://pagina2.html">dolor sit amet</a>, consectetur adipisicing elit. Dolorem illo quis aliquam fugiat accusamus labore nisi sint quibusdam temporibus et pariatur, 
+                perferendis enim tempora ducimus earum officia ullam magnam, nihil quidem? Incidunt magnam nesciunt quos ullam provident quisquam reprehenderit fugit architecto nihil cupiditate totam nemo, 
+                delectus recusandae <a href="https://pagina3.html">sapiente</a> atque quidem.
+            </p>
+            <p>
+                Lorem <a href="https://pagina4.html">dolor sit amet</a>, consectetur adipisicing elit. Dolorem illo quis aliquam fugiat accusamus labore nisi sint quibusdam temporibus et pariatur, 
+                perferendis enim tempora ducimus earum officia ullam magnam, nihil quidem? Incidunt magnam nesciunt quos ullam provident quisquam reprehenderit fugit architecto nihil cupiditate totam nemo, 
+                delectus recusandae <a href="https://pagina2.html">sapiente</a> atque quidem.
+            </p>
+            <p>
+                Lorem <a href="https://pagina5.html">dolor sit amet</a>, consectetur adipisicing elit. Dolorem illo quis aliquam fugiat accusamus labore nisi sint quibusdam temporibus et pariatur, 
+                perferendis enim tempora ducimus earum officia ullam magnam, nihil quidem? Incidunt magnam nesciunt quos ullam provident quisquam reprehenderit fugit architecto nihil cupiditate totam nemo, 
+                delectus recusandae <a href="https://pagina6.html">sapiente</a> atque <a href="https://pagina2.html">quidem</a>.
+            </p>
+        </div>
+
+        <script>
+            window.onload = function()
+            {
+                let info = document.getElementById("datos"); //Acceso al div
+                let enlaces = document.getElementsByTagName("a"); //Acceso a todos los enlaces
+
+                let totalEnlaces = "El numero de enlaces del documento es igual a " + enlaces.length; //obtiene el total de elementos en enlace
+                //let direccion = "El penultimo enlace apunta a " + enlaces.item(enlaces.length-2);
+                let direccion2 = "El penultimo enlace apunta a " + enlaces[enlaces.length-2].href;
+
+                alert(direccion2);
+
+                let cont = 0;
+                for (let i = 0; i <= enlaces.length; i++)
+                {
+                    if (enlaces[i] == "https://pagina2.html" || enlaces[i] == "https://pagina2.html/") //enlaces[i].href == "https://pagina2.html" || enlaces[i].href == "https://pagina2.html/"
+                    {
+                        cont++;
+                    }
+                }
+
+                info.innerHTML = totalEnlaces + "<br>" + direccion2 + "<br>" + cont + "apuntan a https://pagina2.html" + info.innerHTML;
+
+            }
+        </script>
+    </body>
+</html>

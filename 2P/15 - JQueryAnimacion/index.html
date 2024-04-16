@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 - JQuery Animación</title>
+
+    <style>
+        .rectangulo{
+            width: 150px;
+            height: 100px;
+            background-color: #00FF00;
+        }
+    </style>
+
+</head>
+<body>
+
+    <input type="button" value="Aumentar">
+    <input type="button" value="Disminuir">
+    <div class="rectangulo"></div>
+
+    <script>
+        window.onload = function(){
+            $("input").on("click", function(){
+                if($(this).attr("value") == "Aumentar")
+                {
+                    $("div").animate({"width" : "+=100px", "height" : "+=100px"}, "slow", "linear");
+                    //$("div").css("width", "300px");
+                  //  $("div").css("height", "300px");
+                }
+                else
+                {
+                    $("div").animate({"width" : "-=100px", "height" : "-=100px"}, "slow", "linear");
+                }
+            });
+        }
+    </script>
+    
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</body>
+</html>

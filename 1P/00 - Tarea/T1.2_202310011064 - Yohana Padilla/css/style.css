@@ -1,0 +1,98 @@
+body{
+    margin: 0 auto;
+}
+
+#capturaDiv{
+    margin: 5% auto;
+    background-color: #fafafa;
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+
+}
+
+#btnAgregar{
+    background-color: #25D538;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#btnAgregar:hover{
+    background-color: #0E8B1A;
+    border: 2px solid #000000;
+}
+
+#btnCancelar{
+    background-color: #EC1D1D;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#btnCancelar:hover{
+    background-color: #550A03;
+    border: 1px solid #000000;
+}
+
+#btnEstadistica{
+    background-color: #EBF112;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#btnEstadistica:hover{
+    background-color: #DEAC07;
+    border: 1px solid #000000;
+}
+
+#grilla td, #grilla th{
+    border: 1px solid #ddd;
+}
+
+#grilla{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+#grilla th{
+    background-color: #4CAF50;
+    padding: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+}
+
+#grilla tr:nth-child(even){
+    background-color: #F2F2F2F2;
+}
+
+#grilla tr:hover{
+    background-color: #ddd;
+}
+
+.btnDel{
+    background-color: #EC1D1D;
+    color: white;
+    border-radius: 5px;
+}
+
+#pieChart{
+    margin: 5% auto;
+    width: 75%;
+}
+
+#barChart{
+    margin: 5% auto;
+    width: 75%;
+}

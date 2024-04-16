@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>07 - OcultandoMostrandoParrafos</title>
+        <style>
+            .oculto{
+                display: none;
+            }
+            .visible{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="datos">
+            <p id="contenido_1">
+                [1]Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Harum incidunt recusandae aperiam soluta, quo at, iusto quaerat veniam ex, animi consectetur illum. 
+                Commodi atque voluptates corporis esse iure culpa nesciunt!
+            </p>
+            <a href="#" id="enlace_1" onclick="mostrarocultar('1'); return false;">Ocultar Contenido</a>
+            <br>
+            <p id="contenido_2">
+                [2]Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Harum incidunt recusandae aperiam soluta, quo at, iusto quaerat veniam ex, animi consectetur illum. 
+                Commodi atque voluptates corporis esse iure culpa nesciunt!
+            </p>
+            <a href="#" id="enlace_2" onclick="mostrarocultar('2'); return false;">Ocultar Contenido</a>
+            <br>
+            <p id="contenido_3">
+                [3]Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Harum incidunt recusandae aperiam soluta, quo at, iusto quaerat veniam ex, animi consectetur illum. 
+                Commodi atque voluptates corporis esse iure culpa nesciunt!
+            </p>
+            <a href="#" id="enlace_3" onclick="mostrarocultar('3'); return false;">Ocultar Contenido</a>
+            <br>
+        </div>
+
+        <script>
+            function mostrarocultar(id)
+            {
+                let parrafo = document.getElementById("contenido_"+id);
+                let enlace = document.getElementById("enlace_"+id);
+
+                if(parrafo.style.display == "" || parrafo.style.display == "block")
+                {
+                    parrafo.style.display = "none";
+                    enlace.innerHTML = "Mostrar Contenido"
+                }
+                else
+                {
+                    parrafo.style.display = "block";
+                    enlace.innerHTML = "Ocultar Contenido"
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('fondo-UTH.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.uth {
+  width: 300px; /* Ajusta el tamaño de la imagen */
+  margin: 0 auto 20px; /* Centra la imagen */
+  display: block;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+label {
+  display: inline-block; /* Cambia a bloque en línea */
+  text-align: center; /* Centra el texto */
+  width: 100%; /* Ancho del 70% del contenedor */
+  margin: 0 auto 5px; /* Centra y agrega espacio debajo */
+}
+
+input,
+select {
+  width: 70%; /* Ancho del 70% del contenedor */
+  padding: 10px;
+  margin: 0 auto 10px; /* Centra y agrega espacio debajo */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block; /* Muestra en bloque para centrar */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0C8021;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Muestra en bloque para centrar */
+  margin: 0 auto; /* Centra el botón */
+}
+
+button:hover {
+  background-color: #28B463;
+}
+

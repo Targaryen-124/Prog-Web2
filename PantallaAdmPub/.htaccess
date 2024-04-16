@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^old-page\.php$ /new-page.php [R=301,L]

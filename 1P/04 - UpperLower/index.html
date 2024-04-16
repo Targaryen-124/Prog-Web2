@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>04 - UpperLower</title>
+    </head>
+    <body>
+        <script>
+            function estado(cadena)
+            {
+                let resultado = "La cadena \"" + cadena + "\"";
+
+                if(cadena == cadena.toUpperCase()) //= Asignacion == Comparacion === Compara igualdd y tipo de dato
+                {
+                    resultado += ", esta formado solo por Mayusculas"; //+= para concatenar con el anterior resultado
+                }
+                else if(cadena == cadena.toLowerCase())
+                {
+                    resultado += ", esta formado solo por Minusculas"; //+= para concatenar con el anterior resultado
+                }
+                else
+                {
+                    resultado += ", esta formado por Mayusculas y Minusculas"; //+= para concatenar con el anterior resultado
+                }
+                return resultado;
+            }
+
+            alert(estado("BIENVENIDOS A LA CLASE"));
+            alert(estado("de programacion web 2"));
+            alert(estado("Esto es JavaScript"));
+
+        </script>
+    </body>
+</html>

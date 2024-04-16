@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta author="Yohana Padilla - 202310011064">
+    <title>00 - Tarea</title>
+    <style>
+        .fondo{
+            background-color: skyblue;
+        }
+        .negrita{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body id="cuerpo" class="cuerpo">
+    <div id="controles">
+        <label>Nombre: </label><input type="text" id="nombre"><br>
+        <label>Edad: </label><input type="text" id="edad"><br>
+        <label>Genero</label>
+        <select id="genero">
+            <option value="-" selected>-</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+        </select><br>
+        <label>Direccion: </label><textarea id="direccion" rows="2" cols="33"></textarea><br>
+    </div>
+    <br>
+    <div>
+        <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+        <button onclick="fondoAzul()">Fondo Azul</button>
+        <button onclick="textoNegrita(); return false;">Texto Negrita</button>
+        <button onclick="bloquearCampos()">Bloquear Campos</button>
+        <button onclick="habilitarCampos()">Habilitar Campos</button>
+        <button onclick="eliminarCampos()">Eliminar Campos</button>
+        <button onclick="crearCampos()">Crear Campos</button>
+        <button onclick="cerrar()">Cerrar</button>
+    </div>
+</body>
+
+<script>
+    function mostrarMensaje(){
+        let nombre = document.getElementById("nombre").value;
+        let edad = document.getElementById("edad").value;
+        let genero = document.getElementById("genero").value;
+        let direccion = document.getElementById("direccion").value;
+
+        alert("Nombre: " + nombre + "\n" + "Edad: " + edad + "\n" + "Genero: " + genero + "\n" + "Direccion: " + direccion)
+    }
+
+    function fondoAzul(){
+        let fondo = document.getElementById("cuerpo");
+        fondo.className = "fondo";
+    }
+
+    function textoNegrita(){
+        let negrita = document.getElementById("cuerpo");
+        negrita.className = "negrita";
+    }
+
+    function bloquearCampos(){
+        let nombre = document.getElementById("nombre");
+        let edad = document.getElementById("edad");
+        let genero = document.getElementById("genero");
+        let direccion = document.getElementById("direccion");
+
+        nombre.disabled = true;
+        edad.disabled = true;
+        genero.disabled = true;
+        direccion.disabled = true;
+    }
+
+    function habilitarCampos(){
+        let nombre = document.getElementById("nombre");
+        let edad = document.getElementById("edad");
+        let genero = document.getElementById("genero");
+        let direccion = document.getElementById("direccion");
+
+        nombre.disabled = false;
+        edad.disabled = false;
+        genero.disabled = false;
+        direccion.disabled = false;
+    }
+
+    function eliminarCampos(){
+        let campos = document.getElementById("controles");
+        campos.style.display = "none";
+    }
+
+    function crearCampos(){
+        let campos = document.getElementById("controles");
+        campos.style.display = "block";
+    }
+
+    function cerrar(){
+        window.close();
+    }
+</script>
+
+</html>

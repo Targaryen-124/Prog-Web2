@@ -1,0 +1,40 @@
+body{
+    margin: 0 auto;
+}
+
+#capturaDiv{
+    margin: 5% auto;
+    background-color: #fafafa;
+    width: 30%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+#botonCalc{
+    background-color: #25D538;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#botonCalc:hover{
+    background-color: #0e8b1a;
+    border: 2px solid #000000;
+}
+
+#botonCancel{
+    background-color: #EC1D1D;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#botonCancel:hover{
+    background-color: #550a03;
+    border: 2px solid #000000;
+}

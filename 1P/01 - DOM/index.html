@@ -1,0 +1,73 @@
+<html lang-"es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>01 - DOM</title>
+    </head>
+    <body onclick="obtenerElemento(event)">
+        <div>
+            <p class="parrafos" id="parrafo1">Bienvenido</p>
+            <p class="parrafos" id="parrafo2">Bienvenido a la clase de Programacion Web 2</p>
+            <p id="nuevoParrafo"></p>
+        </div>
+
+        <div>
+            <emptyNode></emptyNode>
+            <p class="parrafos2" id="parrafo3" name="parrafo3">DOM</p>
+            <emptyNode></emptyNode>
+            <p class="parrafos2" id="parrafo4">Trabajando con Nodos</p>
+            <emptyNode></emptyNode>
+        </div>
+
+        <table>
+            <tr>
+                <td><button>Aceptar</button></td>
+            </tr>
+        </table>
+
+        <p id="etiqueta"></p>
+
+        <!--<button onclick="rep();">Activar Voz</button>-->
+
+        <script>
+            console.log(window);
+            console.log(document);
+            console.log(document.head);
+
+            var nuevoElemento = document.createElement("p"); //Nodo tipo Parrafo
+            var textNode = document.createTextNode("Soy un nuevo parrafo"); //Nodo tipo Texto
+
+            nuevoElemento.appendChild(textNode); //Vincular Nodo padre con Nodo hijo
+            document.getElementById("nuevoParrafo").appendChild(nuevoElemento);
+
+            function obtenerElemento(event)
+            {
+                let apuntador = event.target.tagName;
+                //alert(apuntador);
+                let padre = event.target.parentNode.tagName; //Escalar a 1 nivel de hijo a padre
+                let abuelo = event.target.parentNode.parentNode.tagName; //Escalar a 2 niveles  de hijo a padre
+                let hijo1 = event.target.childNodes[1].tagName; //Escalar a 1 nivel de padre a hijo
+                let hijo2 = event.target.childNodes[3].tagName; //Escalar a 1 nivel de padre a hijo
+                document.getElementById("etiqueta").innerHTML = "Soy la etiqueta " + apuntador + " y mi padre es " + padre + " y mi abuelo es " + abuelo;
+                document.getElementById("etiqueta").innerHTML = "Soy la etiqueta " + apuntador + " y mis hijos son " + hijo1 + " y " + hijo2;
+            }
+
+            //console.log(document.getElementById("nuevoParrafo"));
+            //console.log(document.getElementsByClassName("parrafos"));
+            //console.log(document.getElementsByTagName("p"));
+
+            //document.getElementById("parrafo1");
+            //document.getElementsByClassName("parrafos");
+            //document.getElementsByTagName("p");
+
+            //document.body.appendChild(nuevoElemento);
+
+            /*function rep() //Texto a voz
+            {
+                let texto = "Hola, Bienvenido a la clase de Programacion Web 2";
+                const voz = (texto) => speechSynthesis.speak(new SpeechSynthesisUtterance(texto)); //Texto a voz 
+                voz(texto);
+            }*/
+        </script>
+    </body>
+</html>

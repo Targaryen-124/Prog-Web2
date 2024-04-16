@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>02 - Ambito</title>
+    </head>
+    <body>
+        <script>
+            var textoVar="Hola soy un Var"; //La variable con VAR es global y se puede modificar el valor cuando se desee
+            let textoLet="Hola soy un Let"; //Toma el valor de cada ambito, no cambio de manera permanente
+
+            if(true)
+            {
+                //ambito de un if
+                var textoVar = "Soy Var de Nuevo";
+                let textoLet = "Soy Let de Nuevo";
+                document.writeln(textoVar);
+                document.writeln("<br>");
+                document.writeln(textoLet);
+                document.writeln("<br>");
+            }
+            document.writeln("<br>");
+            document.writeln(textoVar);
+            document.writeln("<br>");
+            document.writeln(textoLet);
+            document.writeln("<br>");
+        </script>
+
+    </body>
+</html>

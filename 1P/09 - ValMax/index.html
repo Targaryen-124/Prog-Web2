@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Valor Máximo</title>
+</head>
+<body>
+    <div id="info">Máximo 100 caracteres</div>
+    <textarea name="" id="texto" cols="30" rows="5" onkeypress="return limite(event, 100);" onkeyup="actualizarInfo(100);"></textarea>
+
+    <script>
+        function limite(evento, maximoCarecteres){
+            let elemento = document.getElementById("texto");
+            let eventoClon = evento || window.event;
+
+            let codigoCaracter = eventoClon.charCode || eventoClon.keyCode;
+
+           /* if(codigoCaracter == 65)
+                return false;
+            */
+
+            if(elemento.value.length >= maximoCarecteres)  
+                return false;
+            else
+                return true  
+
+            //return false;
+        }
+
+        function actualizarInfo(maximoCarecteres){
+            let info = document.getElementById("info");
+            let elemento = document.getElementById("texto");
+
+            if(elemento.value.length >= maximoCarecteres)
+                info.innerHTML = "Haz agotado el máximo de caracteres (100)";
+            else
+                info.innerHTML =   "Puedes escribir hasta " + (maximoCarecteres - elemento.value.length) + " caracteres adicionales";            
+        }
+    </script>
+</body>
+</html>

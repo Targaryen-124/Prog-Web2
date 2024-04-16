@@ -1,0 +1,69 @@
+
+@import url('https://fonts.cdnfonts.com/css/poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: url('imagenes/fondo-UTH.png') no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+.logoUTH {
+    margin: 15px;
+    color: #0C8021;
+    padding: 2px; 
+  }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    background: transparent;
+    border: 2px solid #0C8021;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 25px #618666;
+    color: #02380e ;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper form {
+    text-align: center;
+}
+
+.wrapper h1 {
+    font-size: 100px;
+}
+
+.wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    background: transparent;
+    border: 2px solid #0C8021;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 25px #618666;
+    color: #02380e ;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper2 form {
+    text-align: center;
+}
+
+.wrapper2 h1 {
+    font-size: 100px;
+}
+

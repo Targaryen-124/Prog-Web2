@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="logica.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="capturaDiv">
+        <table>
+
+            <tr>
+                <td>Seleccione Operador Aritmetico:</td>
+                <td>
+                    <select name="" id="operador">
+                        <option value="suma">Suma</option>
+                        <option value="resta">Resta</option>
+                        <option value="mult">Multiplicación</option>
+                        <option value="div">División</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ingrese Valor 1:</td>
+                <td><input type="text" id="valor1" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            
+            <tr>
+                <td>Ingrese Valor 2:</td>
+                <td><input type="text" id="valor2" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+
+            <tr>
+                <td>Resultado:</td>
+                <td>
+                    <label id="resultado" class="msj"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button id="botonCalc" onclick="calcular();">Calcular</button>
+                </td>
+                <td>
+                    <button id="botonCancel" onclick="cancelar();">Cancelar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.10.5/autoNumeric.min.js" integrity="sha512-EGJ6YGRXzV3b1ouNsqiw4bI8wxwd+/ZBN+cjxbm6q1vh3i3H19AJtHVaICXry109EVn4pLBGAwaVJLQhcazS2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>
